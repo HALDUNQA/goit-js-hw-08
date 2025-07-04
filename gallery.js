@@ -82,7 +82,7 @@ const images = [
   galleryContainer.appendChild(listItem);
 });
 
-/* MODAL OLUŞTURMA */
+/* modal part */
 galleryContainer.addEventListener('click', (event) => {
     event.preventDefault();
   
