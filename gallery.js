@@ -65,24 +65,21 @@ const images = [
   ];
   
   const galleryContainer = document.querySelector('.gallery');
+
   images.forEach(({ preview, original, description }) => {
+
     const listItem = document.createElement('li');
     listItem.classList.add('gallery-item');
-    listItem.innerHTML = `
-    <a class="gallery-link" href="${original}">
-      <img
-        class="gallery-image"
-        src="${preview}"
-        data-source="${original}"
-        alt="${description}"
-      />
-    </a>
-  `;
 
+    listItem.innerHTML = `<a class="gallery-link" href="${original}">
+
+      <img class="gallery-image" src="${preview}" 
+      data-source="${original}" alt="${description}"/> </a>`;
   galleryContainer.appendChild(listItem);
 });
 
 /* modal part */
+
 galleryContainer.addEventListener('click', (event) => {
     event.preventDefault();
   
@@ -92,8 +89,7 @@ galleryContainer.addEventListener('click', (event) => {
   
     
     const modal = basicLightbox.create(`
-      <img src="${imageSrc}" alt="Large Image" />
-    `);
+      <img src="${imageSrc}" alt="Large Image" />`);
   
     modal.show();
   
